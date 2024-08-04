@@ -8,31 +8,40 @@ ER-Save-Lib is a library for reading and writing Elden Ring save files, compatib
 use er_save_lib::SaveApi;
 
 fn main() {
-   // PC
-   let save_api = SaveApi::from_path("./test/ER0000.sl2").expect("Failed to read save file!");
+    #[cfg(unix)]
+    let null_path = "/dev/null";
+    #[cfg(windows)]
+    let null_path = "NUL";
+    let character_index = 0;
 
-   match save_api {
-      Ok(save_api) => {
-         let character_index = 0;
-         save_api.set_character_name(character_index, "New Name");
-         save_api.write_to_path("new/path/file_name.sl2");
-      },
-      Err(err) => eprintln!("{err}"),
-   }
-   
-   
-   // Playstation
-   let save = SaveApi::from_path("./test/ps_save.txt").expect("Failed to read save file!");
-   
-   match save_api {
-      Ok(save_api) => {
-         let character_name = save_api.character_name();
-         println!("{}", character_name);
-         let bytes = save.write_to_vec();
-      },
-         Err(err) => eprintln!("{err}"),
-      }
-   }
+    // PC
+    let save_api = SaveApi::from_path("./test/ER0000.sl2");
+
+    match save_api {
+        Ok(mut save_api) => {
+            save_api
+                .set_character_name(character_index, "New Name")
+                .expect("");
+
+            save_api.write_to_path(null_path).expect("");
+        }
+        Err(err) => eprintln!("{err}"),
+    }
+
+    // Playstation
+    let save_api = SaveApi::from_path("./test/ps_save.txt");
+
+    match save_api {
+        Ok(save_api) => {
+            let character_name = save_api.character_name(character_index);
+            println!("{}", character_name);
+            save_api
+                .write_to_path(null_path)
+                .expect("");
+        }
+        Err(err) => eprintln!("{err}"),
+    }
+}
 ```
 
 
@@ -42,24 +51,28 @@ fn main() {
 use er_save_lib::Save;
 
 fn main() {
-   // PC
-   let save = Save::from_path("./test/ER0000.sl2").expect("Failed to read save file!");
+    #[cfg(unix)]
+    let null_path = "/dev/null";
+    #[cfg(windows)]
+    let null_path = "NUL";
+
+    // PC
+    let save = Save::from_path("./test/ER0000.sl2");
 
     match save {
         Ok(save) => {
-          save.write_to_path("new/path/file_name.sl2");
-        },
+            save.write_to_path(null_path).expect("");
+        }
         Err(err) => eprintln!("{err}"),
     }
 
-
-   // Playstation
-   let save = Save::from_path("./test/ps_save.txt").expect("Failed to read save file!");
+    // Playstation
+    let save = Save::from_path("./test/ps_save.txt");
 
     match save {
         Ok(save) => {
-          let bytes = save.write_to_vec();
-        },
+            save.write_to_vec().expect("");
+        }
         Err(err) => eprintln!("{err}"),
     }
 }
