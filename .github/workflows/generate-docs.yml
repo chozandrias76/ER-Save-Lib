@@ -23,6 +23,8 @@ jobs:
       run: cargo doc --no-deps
 
     - name: Create or update docs branch
+      env:
+        GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
       run: |
         # Determine the branch name
         if [ "${GITHUB_REF##*/}" = "master" ]; then
