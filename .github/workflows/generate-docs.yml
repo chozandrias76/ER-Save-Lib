@@ -19,10 +19,12 @@ jobs:
     - name: Set up Rust
       uses: actions-rs/toolchain@v1
       with:
-        toolchain: stable
+        toolchain: nightly-x86_64-unknown-linux-gnu
 
     - name: Generate documentation
-      run: cargo doc --no-deps
+      env:
+        RUSTDOCFLAGS: --enable-index-page -Zunstable-options
+      run: cargo +nightly doc --no-deps
 
     - name: Deploy to GitHub Pages
       env:
