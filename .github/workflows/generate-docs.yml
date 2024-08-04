@@ -50,7 +50,11 @@ jobs:
         # Copy the generated documentation to the docs branch
         cp -r ../target/doc/* .
 
-        # Commit and push the changes
-        git add .
-        git commit -m "Update documentation for ${GITHUB_REF##*/}"
-        git push origin $DOCS_BRANCH
+    - name: Commit and push changes
+      uses: EndBug/add-and-commit@v9
+      with:
+        author_name: "github-actions[bot]"
+        author_email: "github-actions[bot]@users.noreply.github.com"
+        message: "Update documentation for ${GITHUB_REF##*/}"
+        add: '.'
+        push: true
