@@ -1,0 +1,1 @@
+window.SIDEBAR_ITEMS = {"struct":["PLAYER_COMMON_PARAM_ST"]};

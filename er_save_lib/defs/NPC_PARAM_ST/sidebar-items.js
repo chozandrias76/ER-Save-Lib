@@ -1,0 +1,1 @@
+window.SIDEBAR_ITEMS = {"struct":["NPC_PARAM_ST"]};

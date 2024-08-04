@@ -1,0 +1,1 @@
+window.SIDEBAR_ITEMS = {"struct":["CS_TEXTURE_FILTER_QUALITY_DETAIL"]};

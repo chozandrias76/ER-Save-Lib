@@ -1,0 +1,1 @@
+window.SIDEBAR_ITEMS = {"struct":["CS_EFFECT_QUALITY_DETAIL"]};

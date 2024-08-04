@@ -1,0 +1,1 @@
+window.SIDEBAR_ITEMS = {"struct":["GPARAM_REF_SETTINGS_PARAM_ST"]};

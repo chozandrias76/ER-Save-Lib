@@ -1,0 +1,1 @@
+window.SIDEBAR_ITEMS = {"struct":["EQUIP_PARAM_CUSTOM_WEAPON_ST"]};

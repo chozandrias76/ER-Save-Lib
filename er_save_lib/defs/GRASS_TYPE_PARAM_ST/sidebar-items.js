@@ -1,0 +1,1 @@
+window.SIDEBAR_ITEMS = {"struct":["GRASS_TYPE_PARAM_ST"]};

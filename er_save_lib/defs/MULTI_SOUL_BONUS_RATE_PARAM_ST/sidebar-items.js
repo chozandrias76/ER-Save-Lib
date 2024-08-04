@@ -1,0 +1,1 @@
+window.SIDEBAR_ITEMS = {"struct":["MULTI_SOUL_BONUS_RATE_PARAM_ST"]};

@@ -1,0 +1,1 @@
+window.SIDEBAR_ITEMS = {"struct":["FINAL_DAMAGE_RATE_PARAM_ST"]};

@@ -1,0 +1,1 @@
+window.SIDEBAR_ITEMS = {"struct":["GRASS_MAP_SETTINGS_PARAM_ST"]};

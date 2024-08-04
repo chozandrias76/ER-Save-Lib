@@ -1,0 +1,1 @@
+window.SIDEBAR_ITEMS = {"struct":["MULTI_PLAY_CORRECTION_PARAM_ST"]};

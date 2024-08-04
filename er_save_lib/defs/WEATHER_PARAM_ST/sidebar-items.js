@@ -1,0 +1,1 @@
+window.SIDEBAR_ITEMS = {"struct":["WEATHER_PARAM_ST"]};

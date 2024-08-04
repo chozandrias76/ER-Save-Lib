@@ -1,0 +1,1 @@
+window.SIDEBAR_ITEMS = {"struct":["CHARACTER_INIT_PARAM"]};

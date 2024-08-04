@@ -1,0 +1,1 @@
+window.SIDEBAR_ITEMS = {"struct":["CS_KEY_ASSIGN_MENUITEM_PARAM"]};

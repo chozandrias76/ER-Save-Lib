@@ -1,0 +1,1 @@
+window.SIDEBAR_ITEMS = {"struct":["AI_ANIM_TBL_PARAM"]};

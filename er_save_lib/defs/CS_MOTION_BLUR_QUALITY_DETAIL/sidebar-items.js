@@ -1,0 +1,1 @@
+window.SIDEBAR_ITEMS = {"struct":["CS_MOTION_BLUR_QUALITY_DETAIL"]};

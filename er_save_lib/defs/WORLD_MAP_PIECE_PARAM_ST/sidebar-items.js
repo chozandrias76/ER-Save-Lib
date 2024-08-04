@@ -1,0 +1,1 @@
+window.SIDEBAR_ITEMS = {"struct":["WORLD_MAP_PIECE_PARAM_ST"]};

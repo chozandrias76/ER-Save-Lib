@@ -1,0 +1,1 @@
+window.SIDEBAR_ITEMS = {"struct":["CAMERA_FADE_PARAM_ST"]};
