@@ -79,5 +79,8 @@ fn main() {
 ```
 
 ## Credits
-<a href="https://github.com/vswarte/"><img src="https://github.com/user-attachments/assets/c79f4130-a990-4b50-8131-5fe938b7573f"/></a>
-<a href="https://github.com/nordgaren/"><img src="https://github.com/ClayAmore/ER-Save-Editor/assets/131625063/710c9ee6-c3df-4665-be6b-d96bce1ebf46"/>
+<div style="display: column;">
+<a href="https://github.com/vswarte/"><img width=100 height=100  src="https://github.com/user-attachments/assets/c79f4130-a990-4b50-8131-5fe938b7573f"/></a>
+<a href="https://github.com/nordgaren/"><img width=100 height=100  src="https://github.com/ClayAmore/ER-Save-Editor/assets/131625063/710c9ee6-c3df-4665-be6b-d96bce1ebf46"/>
+<a href="https://github.com/ClayAmore/"><img width=100 height=100 src="https://avatars.githubusercontent.com/u/131625063?v=4"/>
+</div>
