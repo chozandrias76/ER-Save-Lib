@@ -189,7 +189,7 @@
     <span class="kw">let </span>first_step_grace = <span class="number">76101</span>;
     <span class="kw">let </span><span class="kw-2">mut </span>save = Save::from_path(<span class="string">"./test/ER0000.sl2"</span>).unwrap();
     <span class="kw">let _ </span>= EventFlagsApi::set_event_flag(<span class="kw-2">&amp;mut </span>save, first_step_grace, <span class="number">0</span>, <span class="bool-val">true</span>);
-    save.write_to_path(<span class="string">"./test/copy.sl2"</span>)
+    save.write_to_path(<span class="string">"./test/null.sl2"</span>)
         .expect(<span class="string">"Failed to write save file!"</span>);
 }
 </code></pre></div></section></main></body></html>

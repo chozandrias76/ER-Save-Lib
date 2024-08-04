@@ -48,7 +48,7 @@ saved to a file or used as needed.</p>
 
 <span class="kw">fn </span>main() {
     <span class="kw">let </span>save = Save::from_path(<span class="string">"./test/PS_Save.txt"</span>).expect(<span class="string">"Failed to read save file!"</span>);
-    save.write_to_path(<span class="string">"./test/New_Save.txt"</span>).expect(<span class="string">"Failed to write save file!"</span>);
+    save.write_to_path(<span class="string">"./test/null.txt"</span>).expect(<span class="string">"Failed to write save file!"</span>);
 }</code></pre></div>
 <h5 id="safety-1"><a class="doc-anchor" href="#safety-1">§</a>Safety</h5>
 <p>This function is safe to call as it only performs file writing and data formatting operations.</p>
