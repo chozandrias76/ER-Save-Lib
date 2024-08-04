@@ -1,0 +1,54 @@
+name: Generate Documentation
+
+on:
+  push:
+    branches:
+      - master
+      - develop
+
+jobs:
+  generate-docs:
+    runs-on: ubuntu-latest
+
+    steps:
+    - name: Checkout code
+      uses: actions/checkout@v2
+
+    - name: Set up Rust
+      uses: actions-rs/toolchain@v1
+      with:
+        toolchain: stable
+
+    - name: Generate documentation
+      run: cargo doc --no-deps
+
+    - name: Create or update docs branch
+      run: |
+        # Determine the branch name
+        if [ "${GITHUB_REF##*/}" = "master" ]; then
+          DOCS_BRANCH="master-docs"
+        elif [ "${GITHUB_REF##*/}" = "develop" ]; then
+          DOCS_BRANCH="develop-docs"
+        else
+          echo "This action only runs on master or develop branches."
+          exit 1
+        fi
+
+        # Clone the repository and switch to the docs branch
+        git config --global user.name "github-actions[bot]"
+        git config --global user.email "github-actions[bot]@users.noreply.github.com"
+        git clone --branch $DOCS_BRANCH --single-branch https://github.com/${GITHUB_REPOSITORY}.git docs-repo || \
+          git clone https://github.com/${GITHUB_REPOSITORY}.git docs-repo
+        cd docs-repo
+        git checkout -b $DOCS_BRANCH || git checkout $DOCS_BRANCH
+
+        # Remove all files in the docs branch
+        git rm -rf .
+
+        # Copy the generated documentation to the docs branch
+        cp -r ../target/doc/* .
+
+        # Commit and push the changes
+        git add .
+        git commit -m "Update documentation for ${GITHUB_REF##*/}"
+        git push origin $DOCS_BRANCH
