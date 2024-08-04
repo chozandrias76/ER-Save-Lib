@@ -181,7 +181,7 @@ impl Save {
     ///
     /// fn main() {
     ///     let save = Save::from_path("./test/PS_Save.txt").expect("Failed to read save file!");
-    ///     save.write_to_path("./test/New_Save.txt").expect("Failed to write save file!");
+    ///     save.write_to_path("./test/null.txt").expect("Failed to write save file!");
     /// }
     /// ```
     ///

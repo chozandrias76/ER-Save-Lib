@@ -92,6 +92,6 @@ fn set_event_flag() {
     let first_step_grace = 76101;
     let mut save = Save::from_path("./test/ER0000.sl2").unwrap();
     let _ = EventFlagsApi::set_event_flag(&mut save, first_step_grace, 0, true);
-    save.write_to_path("./test/copy.sl2")
+    save.write_to_path("./test/null.sl2")
         .expect("Failed to write save file!");
 }
