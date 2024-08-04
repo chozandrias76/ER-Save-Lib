@@ -1,3 +1,3 @@
 (function() {var implementors = {
-"er_save_lib":[["impl <a class=\"trait\" href=\"https://doc.rust-lang.org/1.80.0/core/fmt/trait.Display.html\" title=\"trait core::fmt::Display\">Display</a> for <a class=\"enum\" href=\"er_save_lib/enum.SaveApiError.html\" title=\"enum er_save_lib::SaveApiError\">SaveApiError</a>"]]
+"er_save_lib":[["impl <a class=\"trait\" href=\"https://doc.rust-lang.org/nightly/core/fmt/trait.Display.html\" title=\"trait core::fmt::Display\">Display</a> for <a class=\"enum\" href=\"er_save_lib/enum.SaveApiError.html\" title=\"enum er_save_lib::SaveApiError\">SaveApiError</a>"]]
 };if (window.register_implementors) {window.register_implementors(implementors);} else {window.pending_implementors = implementors;}})()
