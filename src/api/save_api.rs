@@ -4,13 +4,12 @@ use std::{
     path::Path,
 };
 
+use super::event_flags::EventFlagsApi;
 use crate::{
     regulation::{params::param_structs, regulation::RegulationParseError},
     save::save::SaveParseError,
     Save,
 };
-
-use super::event_flags::EventFlagsApi;
 
 #[derive(thiserror::Error, Debug)]
 pub enum SaveApiError {
@@ -342,6 +341,35 @@ impl SaveApi {
         self.raw.user_data_x[index].player_game_data.hp
     }
 
+    /// Returns the equipped gestures for the character at the specified index.
+    ///
+    /// # Example
+    /// ```rust
+    /// use er_save_lib::SaveApi;
+    /// let save_api = SaveApi::from_path("./test/ER0000.sl2").unwrap();
+    /// let equipped_gestures = save_api.equipped_gestures(0);
+    /// ```
+    pub fn equipped_gestures(&self, index: usize) -> &Vec<u32> {
+        &self.raw.user_data_x[index]
+            .equipped_gestures
+            .equipped_gesture
+    }
+
+    /// Sets the equipped gestures for the character at the specified index.
+    /// 
+    /// # Example
+    /// ```rust
+    /// use er_save_lib::SaveApi;
+    /// let mut save_api = SaveApi::from_path("./test/ER0000.sl2").unwrap();
+    /// save_api.set_equipped_gestures(0, vec![1u32,2u32,3u32]).unwrap();
+    /// ```
+    pub fn set_equipped_gestures(&mut self, index: usize, new_gestures: Vec<u32>) -> Result<(), SaveApiError> {
+        self.raw.user_data_x[index]
+            .equipped_gestures
+            .equipped_gesture = new_gestures;
+        Ok(())
+    }
+
     /// Sets the hp of the character at the specified index.
     ///
     /// # Example
@@ -356,7 +384,6 @@ impl SaveApi {
         Ok(())
     }
 
-    
     /// Gets the max hp of the character at the specified index.
     ///
     /// # Example
