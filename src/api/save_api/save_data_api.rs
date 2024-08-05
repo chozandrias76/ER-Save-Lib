@@ -1,9 +1,9 @@
-mod save_data {
+mod save_data_api {
     use crate::SaveApi;
     use crate::SaveApiError;
     use crate::SaveType;
-    use std::
-        path::Path;
+    use std::path::Path;
+
 
     impl SaveApi {
         /// Converts the save data to a vector of bytes.
