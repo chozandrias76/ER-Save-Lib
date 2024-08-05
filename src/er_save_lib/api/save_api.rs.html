@@ -894,19 +894,45 @@
 <a href="#894" id="894">894</a>
 <a href="#895" id="895">895</a>
 <a href="#896" id="896">896</a>
+<a href="#897" id="897">897</a>
+<a href="#898" id="898">898</a>
+<a href="#899" id="899">899</a>
+<a href="#900" id="900">900</a>
+<a href="#901" id="901">901</a>
+<a href="#902" id="902">902</a>
+<a href="#903" id="903">903</a>
+<a href="#904" id="904">904</a>
+<a href="#905" id="905">905</a>
+<a href="#906" id="906">906</a>
+<a href="#907" id="907">907</a>
+<a href="#908" id="908">908</a>
+<a href="#909" id="909">909</a>
+<a href="#910" id="910">910</a>
+<a href="#911" id="911">911</a>
+<a href="#912" id="912">912</a>
+<a href="#913" id="913">913</a>
+<a href="#914" id="914">914</a>
+<a href="#915" id="915">915</a>
+<a href="#916" id="916">916</a>
+<a href="#917" id="917">917</a>
+<a href="#918" id="918">918</a>
+<a href="#919" id="919">919</a>
+<a href="#920" id="920">920</a>
+<a href="#921" id="921">921</a>
+<a href="#922" id="922">922</a>
+<a href="#923" id="923">923</a>
 </pre></div><pre class="rust"><code><span class="kw">use </span>std::{
     collections::{BTreeMap, HashMap},
     num::ParseIntError,
     path::Path,
 };
 
+<span class="kw">use </span><span class="kw">super</span>::event_flags::EventFlagsApi;
 <span class="kw">use crate</span>::{
     regulation::{params::param_structs, regulation::RegulationParseError},
     save::save::SaveParseError,
     Save,
 };
-
-<span class="kw">use </span><span class="kw">super</span>::event_flags::EventFlagsApi;
 
 <span class="attr">#[derive(thiserror::Error, Debug)]
 </span><span class="kw">pub enum </span>SaveApiError {
@@ -1238,6 +1264,35 @@
         <span class="self">self</span>.raw.user_data_x[index].player_game_data.hp
     }
 
+    <span class="doccomment">/// Returns the equipped gestures for the character at the specified index.
+    ///
+    /// # Example
+    /// ```rust
+    /// use er_save_lib::SaveApi;
+    /// let save_api = SaveApi::from_path("./test/ER0000.sl2").unwrap();
+    /// let equipped_gestures = save_api.equipped_gestures(0);
+    /// ```
+    </span><span class="kw">pub fn </span>equipped_gestures(<span class="kw-2">&amp;</span><span class="self">self</span>, index: usize) -&gt; <span class="kw-2">&amp;</span>Vec&lt;u32&gt; {
+        <span class="kw-2">&amp;</span><span class="self">self</span>.raw.user_data_x[index]
+            .equipped_gestures
+            .equipped_gesture
+    }
+
+    <span class="doccomment">/// Sets the equipped gestures for the character at the specified index.
+    /// 
+    /// # Example
+    /// ```rust
+    /// use er_save_lib::SaveApi;
+    /// let mut save_api = SaveApi::from_path("./test/ER0000.sl2").unwrap();
+    /// save_api.set_equipped_gestures(0, vec![1u32,2u32,3u32]).unwrap();
+    /// ```
+    </span><span class="kw">pub fn </span>set_equipped_gestures(<span class="kw-2">&amp;mut </span><span class="self">self</span>, index: usize, new_gestures: Vec&lt;u32&gt;) -&gt; <span class="prelude-ty">Result</span>&lt;(), SaveApiError&gt; {
+        <span class="self">self</span>.raw.user_data_x[index]
+            .equipped_gestures
+            .equipped_gesture = new_gestures;
+        <span class="prelude-val">Ok</span>(())
+    }
+
     <span class="doccomment">/// Sets the hp of the character at the specified index.
     ///
     /// # Example
@@ -1252,7 +1307,6 @@
         <span class="prelude-val">Ok</span>(())
     }
 
-    
     <span class="doccomment">/// Gets the max hp of the character at the specified index.
     ///
     /// # Example

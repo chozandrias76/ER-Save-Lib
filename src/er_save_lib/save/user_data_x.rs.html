@@ -2042,7 +2042,7 @@
 #[deku(endian = <span class="string">"endian"</span>, ctx = <span class="string">"endian: Endian"</span>)]
 </span><span class="kw">pub</span>(<span class="kw">crate</span>) <span class="kw">struct </span>EquippedGestures {
     <span class="attr">#[deku(count = <span class="string">"0x6"</span>)]
-    </span>equipped_gesture: Vec&lt;u32&gt;,
+    </span><span class="kw">pub</span>(<span class="kw">crate</span>) equipped_gesture: Vec&lt;u32&gt;,
 }
 
 <span class="comment">// Aquired Projectiles
