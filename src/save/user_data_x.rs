@@ -617,7 +617,7 @@ pub(crate) struct EquippedItem {
 #[deku(endian = "endian", ctx = "endian: Endian")]
 pub(crate) struct EquippedGestures {
     #[deku(count = "0x6")]
-    equipped_gesture: Vec<u32>,
+    pub(crate) equipped_gesture: Vec<u32>,
 }
 
 // Aquired Projectiles
