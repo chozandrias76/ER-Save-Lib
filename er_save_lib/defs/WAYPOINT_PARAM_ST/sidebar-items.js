@@ -1,0 +1,1 @@
+window.SIDEBAR_ITEMS = {"struct":["WAYPOINT_PARAM_ST"]};

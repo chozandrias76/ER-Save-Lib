@@ -1,0 +1,1 @@
+window.SIDEBAR_ITEMS = {"struct":["SHOP_LINEUP_PARAM"]};

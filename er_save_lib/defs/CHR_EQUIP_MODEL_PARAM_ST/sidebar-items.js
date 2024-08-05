@@ -1,0 +1,1 @@
+window.SIDEBAR_ITEMS = {"struct":["CHR_EQUIP_MODEL_PARAM_ST"]};

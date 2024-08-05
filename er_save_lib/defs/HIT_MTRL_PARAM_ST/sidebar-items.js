@@ -1,0 +1,1 @@
+window.SIDEBAR_ITEMS = {"struct":["HIT_MTRL_PARAM_ST"]};

@@ -1,0 +1,1 @@
+window.SIDEBAR_ITEMS = {"struct":["TOUGHNESS_PARAM_ST"]};

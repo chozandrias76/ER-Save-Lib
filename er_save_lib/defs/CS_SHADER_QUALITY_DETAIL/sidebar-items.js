@@ -1,0 +1,1 @@
+window.SIDEBAR_ITEMS = {"struct":["CS_SHADER_QUALITY_DETAIL"]};

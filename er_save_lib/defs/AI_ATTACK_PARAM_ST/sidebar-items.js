@@ -1,0 +1,1 @@
+window.SIDEBAR_ITEMS = {"struct":["AI_ATTACK_PARAM_ST"]};

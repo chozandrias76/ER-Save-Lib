@@ -1,0 +1,1 @@
+window.SIDEBAR_ITEMS = {"struct":["ENEMY_STANDARD_INFO_BANK"]};

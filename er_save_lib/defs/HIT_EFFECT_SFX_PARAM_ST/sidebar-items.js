@@ -1,0 +1,1 @@
+window.SIDEBAR_ITEMS = {"struct":["HIT_EFFECT_SFX_PARAM_ST"]};

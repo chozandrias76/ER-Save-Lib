@@ -1,0 +1,1 @@
+window.SIDEBAR_ITEMS = {"struct":["SWORD_ARTS_PARAM_ST"]};

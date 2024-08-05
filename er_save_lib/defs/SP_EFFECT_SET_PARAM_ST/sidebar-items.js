@@ -1,0 +1,1 @@
+window.SIDEBAR_ITEMS = {"struct":["SP_EFFECT_SET_PARAM_ST"]};

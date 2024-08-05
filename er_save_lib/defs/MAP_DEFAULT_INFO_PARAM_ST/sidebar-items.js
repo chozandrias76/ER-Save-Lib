@@ -1,0 +1,1 @@
+window.SIDEBAR_ITEMS = {"struct":["MAP_DEFAULT_INFO_PARAM_ST"]};

@@ -1,0 +1,1 @@
+window.SIDEBAR_ITEMS = {"struct":["CS_SHADOW_QUALITY_DETAIL"]};

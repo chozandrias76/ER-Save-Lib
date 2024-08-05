@@ -1,0 +1,1 @@
+window.SIDEBAR_ITEMS = {"struct":["FOOT_SFX_PARAM_ST"]};

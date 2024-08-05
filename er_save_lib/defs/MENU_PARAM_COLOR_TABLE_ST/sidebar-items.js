@@ -1,0 +1,1 @@
+window.SIDEBAR_ITEMS = {"struct":["MENU_PARAM_COLOR_TABLE_ST"]};

@@ -1,0 +1,1 @@
+window.SIDEBAR_ITEMS = {"struct":["MAGIC_PARAM_ST"]};

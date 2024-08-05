@@ -1,0 +1,1 @@
+window.SIDEBAR_ITEMS = {"struct":["CHARMAKEMENUTOP_PARAM_ST"]};

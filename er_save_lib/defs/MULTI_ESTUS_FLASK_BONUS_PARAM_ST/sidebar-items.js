@@ -1,0 +1,1 @@
+window.SIDEBAR_ITEMS = {"struct":["MULTI_ESTUS_FLASK_BONUS_PARAM_ST"]};

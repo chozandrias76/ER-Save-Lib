@@ -1,0 +1,1 @@
+window.SIDEBAR_ITEMS = {"struct":["MENU_VALUE_TABLE_SPEC"]};

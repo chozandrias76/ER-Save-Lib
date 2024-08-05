@@ -1,0 +1,1 @@
+window.SIDEBAR_ITEMS = {"struct":["MAP_GD_REGION_DRAW_PARAM"]};

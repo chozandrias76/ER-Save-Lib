@@ -1,0 +1,1 @@
+window.SIDEBAR_ITEMS = {"struct":["BASECHR_SELECT_MENU_PARAM_ST"]};

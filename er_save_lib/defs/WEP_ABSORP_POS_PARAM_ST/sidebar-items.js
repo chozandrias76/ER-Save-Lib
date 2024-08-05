@@ -1,0 +1,1 @@
+window.SIDEBAR_ITEMS = {"struct":["WEP_ABSORP_POS_PARAM_ST"]};

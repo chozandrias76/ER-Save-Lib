@@ -1,0 +1,1 @@
+window.SIDEBAR_ITEMS = {"struct":["MapPieceTexParam_m61"]};

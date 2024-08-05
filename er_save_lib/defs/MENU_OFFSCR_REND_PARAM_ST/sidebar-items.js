@@ -1,0 +1,1 @@
+window.SIDEBAR_ITEMS = {"struct":["MENU_OFFSCR_REND_PARAM_ST"]};

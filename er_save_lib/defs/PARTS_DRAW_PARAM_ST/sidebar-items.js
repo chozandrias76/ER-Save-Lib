@@ -1,0 +1,1 @@
+window.SIDEBAR_ITEMS = {"struct":["PARTS_DRAW_PARAM_ST"]};

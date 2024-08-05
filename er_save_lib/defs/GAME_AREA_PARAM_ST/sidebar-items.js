@@ -1,0 +1,1 @@
+window.SIDEBAR_ITEMS = {"struct":["GAME_AREA_PARAM_ST"]};

@@ -1,0 +1,1 @@
+window.SIDEBAR_ITEMS = {"struct":["BONFIRE_WARP_TAB_PARAM_ST"]};

@@ -1,0 +1,1 @@
+window.SIDEBAR_ITEMS = {"struct":["AI_STANDARD_INFO_BANK"]};
